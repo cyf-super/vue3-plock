@@ -1,7 +1,7 @@
 <script setup lang="ts">
 const prop = defineProps({
   gap: {
-    type: Number,
+    type: String,
     require: true
   }
 });

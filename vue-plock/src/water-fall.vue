@@ -1,21 +1,19 @@
 <script setup lang="ts">
 import type { PropType } from 'vue';
 import { PropConfigType, useMediaValues } from './hooks/useMedia';
-import {
-  createSafeArray,
-  createChunks,
-  createDataColumns
-} from './utils/index';
+import { createChunks, createDataColumns } from './utils/index';
 import fallRow from './components/fall-row.vue';
 
 const props = defineProps({
   data: {
     type: Array as PropType<string[]>,
-    default: () => []
+    default: () => [],
+    require: true
   },
   config: {
     type: Object as PropType<PropConfigType>,
-    default: () => ({})
+    default: () => ({}),
+    require: true
   }
 });
 
@@ -31,19 +29,19 @@ const dataColumns = createDataColumns(chunks, info.columns);
     :style="{
       display: 'grid',
       alignItems: 'start',
-      gridColumnGap: info.gap,
+      gridColumnGap: info.gap + 'px',
       gridTemplateColumns: `repeat(${info.columns}, minmax(0, 1fr))`
     }"
   >
     <fallRow
       v-for="(columns, index) in dataColumns"
       :key="index"
-      :gap="info.gap"
+      :gap="info.gap + 'px'"
     >
       <slot
         v-for="(column, index) in columns"
         :key="index"
-        :item="column"
+        :src="column"
       ></slot>
     </fallRow>
   </div>

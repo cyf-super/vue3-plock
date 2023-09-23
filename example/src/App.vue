@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import waterFall from '../../vue-plock/src/water-fall.vue';
+import { waterFall } from 'vue3-plock';
 import { datasource } from './assets/datasource';
 </script>
 
@@ -14,7 +14,7 @@ import { datasource } from './assets/datasource';
     v-slot="slotProps"
   >
     <img
-      :src="slotProps.item"
+      :src="slotProps.src"
       alt=""
       :style="{ width: '100%', height: 'auto' }"
     />

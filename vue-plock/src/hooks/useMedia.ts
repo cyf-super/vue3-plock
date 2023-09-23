@@ -1,9 +1,9 @@
-import { ComputedRef, reactive, onUnmounted } from 'vue';
+import { reactive, onUnmounted } from 'vue';
 
 export interface PropConfigType {
-  gap: number[];
-  columns: number[];
-  media?: number[];
+  gap: [number, ...number[]];
+  columns: [number, ...number[]];
+  media?: [number, ...number[]];
 }
 
 export function useMediaValues(config: PropConfigType) {
@@ -13,7 +13,6 @@ export function useMediaValues(config: PropConfigType) {
   });
 
   const { columns, gap, media } = config;
-  console.log('🚀 ~ useMediaValues ~ config.value:', config);
   if (!media) {
     return setInfo(0);
   }

@@ -6,9 +6,11 @@ specifiers:
   vite: ^4.4.5
   vue: ^3.3.4
   vue-tsc: ^1.8.5
+  vue3-plock: ^0.1.0
 
 dependencies:
   vue: 3.3.4
+  vue3-plock: 0.1.0
 
 devDependencies:
   '@vitejs/plugin-vue': 4.3.4_vite@4.4.9+vue@3.3.4
@@ -567,6 +569,12 @@ packages:
       '@vue/runtime-dom': 3.3.4
       '@vue/server-renderer': 3.3.4_vue@3.3.4
       '@vue/shared': 3.3.4
+
+  /vue3-plock/0.1.0:
+    resolution: {integrity: sha512-6CdQMFdEm+bqBtJeJDePeiCmxHMJFcuiWisEQdKk00sWiiIHXA3rkhEbQY33KKtlKXWixAHXUQpS9mY4nwEyXw==}
+    dependencies:
+      vue: 3.3.4
+    dev: false
 
   /yallist/4.0.0:
     resolution: {integrity: sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==}
