@@ -1,9 +1,9 @@
 import { reactive, onUnmounted } from 'vue';
 
 export interface PropConfigType {
-  gap: [number, ...number[]];
-  columns: [number, ...number[]];
-  media?: [number, ...number[]];
+  gap: number[];
+  columns: number[];
+  medias?: number[];
 }
 
 export function useMediaValues(config: PropConfigType) {
@@ -12,12 +12,12 @@ export function useMediaValues(config: PropConfigType) {
     gap: 1
   });
 
-  const { columns, gap, media } = config;
-  if (!media) {
+  const { columns, gap, medias } = config;
+  if (!medias) {
     return setInfo(0);
   }
 
-  const mediaQueries = media.map(media =>
+  const mediaQueries = medias.map(media =>
     window.matchMedia(`(min-width: ${media}px)`)
   );
 

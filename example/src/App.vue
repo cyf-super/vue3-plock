@@ -9,7 +9,7 @@ import { datasource } from './assets/datasource';
     :config="{
       columns: [1, 2, 3],
       gap: [24, 12, 6],
-      media: [640, 1024, 1280]
+      medias: [640, 1024, 1280]
     }"
     v-slot="slotProps"
   >

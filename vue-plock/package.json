@@ -1,6 +1,6 @@
 {
   "name": "vue3-plock",
-  "version": "0.1.0",
+  "version": "0.0.2",
   "type": "module",
   "types": "./dist/water-fall.d.ts",
   "scripts": {
@@ -29,7 +29,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/cyf-super/utils"
+    "url": "https://github.com/cyf-super/vue3-plock"
   },
   "peerDependencies": {
     "vue": ">=3.0.0"

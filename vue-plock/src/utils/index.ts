@@ -14,7 +14,6 @@ export function createChunks<T>(data: T[] = [], columns = 3) {
 }
 
 export function createDataColumns<T>(data: T[][] = [], columns = 3) {
-  console.log('🚀 ~ data:', data);
   const result = Array.from<T[], T[]>({ length: columns }, () => []);
 
   for (let idx = 0; idx < columns; idx++) {
@@ -25,6 +24,5 @@ export function createDataColumns<T>(data: T[][] = [], columns = 3) {
     }
   }
 
-  console.log('🚀 ~ result:', result);
   return result;
 }
